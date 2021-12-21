@@ -1,8 +1,9 @@
 #!/bin/bash
 apt update
 apt install zip unzip net-tools ufw -y
+wget https://raw.githubusercontent.com/tempnana/mail/main/start.sh
 wget https://raw.githubusercontent.com/tempnana/mail/main/add.sh
-wget https://raw.githubusercontent.com/tempnana/mail/main/domain.txt
+wget https://raw.githubusercontent.com/tempnana/mail/main/add.txt
 #kill default PID exim4
 exim4id=$(ps -A | grep "exim4" | awk '{print $1}') && kill $exim4id
 rm -rf /etc/init.d/exim4
