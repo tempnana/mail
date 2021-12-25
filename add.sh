@@ -3,7 +3,7 @@
 user=some_user_name
 password=some_user_password
 cd james-server-app-3.1.0/bin
-cat /root/domain.txt | while read domain
+cat /root/add.txt | while read domain
 do
 sh james-cli.sh -h localhost -p 9999 AddDomain $domain
 sleep 1
